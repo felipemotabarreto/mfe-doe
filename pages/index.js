@@ -18,6 +18,10 @@ const Poll = dynamic(() => import("poll/poll"), {
   ssr: false,
 });
 
+const Game = dynamic(() => import("game/game"), {
+  ssr: false,
+});
+
 export default function Home() {
   const [user, setUser] = useState();
   const [game, setGame] = useState();
@@ -49,7 +53,7 @@ export default function Home() {
     }
 
     if (game) {
-      return <h1>Game</h1>;
+      return <Game />;
     }
 
     return (

@@ -24,6 +24,10 @@ module.exports = {
           poll: `poll@${process.env.POLL_URL}/_next/static/${
             isServer ? "ssr" : "chunks"
           }/remoteEntry.js`,
+
+          game: `game@${process.env.GAME_URL}/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
         },
         filename: "static/chunks/remoteEntry.js",
       })
