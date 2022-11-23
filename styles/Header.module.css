@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+.headerBlue {
+    background-color: blue;
+    color: white;
+}
+
+.headerGreen {
+    background-color: green;
+    color: white;
+}
+
+.headerRed {
+    background-color: red;
+    color: white;
+}

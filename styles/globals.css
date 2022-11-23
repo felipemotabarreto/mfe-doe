@@ -17,5 +17,8 @@ a {
 
 #root {
   height: 100vh;
+}
+
+.stepContainer {
   padding: 20px;
 }

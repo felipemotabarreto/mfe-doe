@@ -16,6 +16,14 @@ module.exports = {
           profile: `profile@${process.env.PROFILE_URL}/_next/static/${
             isServer ? "ssr" : "chunks"
           }/remoteEntry.js`,
+
+          teams: `teams@${process.env.TEAMS_URL}/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
+
+          poll: `poll@${process.env.POLL_URL}/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/remoteEntry.js`,
         },
         filename: "static/chunks/remoteEntry.js",
       })
