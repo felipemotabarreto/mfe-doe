@@ -26,8 +26,10 @@ export default function Home() {
   const [user, setUser] = useState();
   const [game, setGame] = useState();
   const [showError, setShowError] = useState(null);
+  const [startingGame, setStartingGame] = useState(null);
 
   const handleStartGame = async () => {
+    setStartingGame(true);
     const _game = await fetch("api/game", {
       method: "GET",
       headers: {
@@ -35,7 +37,7 @@ export default function Home() {
         "Content-Type": "application/json",
       },
     }).then((result) => result.json());
-
+    setStartingGame(false);
     if (_game) {
       setGame(_game);
     } else {
@@ -61,11 +63,11 @@ export default function Home() {
         <Poll userId={user.id} />
         <br />
         <Button variant="primary" type="button" onClick={handleStartGame}>
-          Start Game
+          {startingGame ? "Starting game..." : "Start Game"}
         </Button>
       </>
     );
-  }, [user, game]);
+  }, [user, game, startingGame]);
 
   return (
     <>
